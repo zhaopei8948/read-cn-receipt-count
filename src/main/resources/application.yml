@@ -1,0 +1,22 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /maintain/readredis
+
+cn:
+  path: /maintain/readredis/cnws
+  port: 8181
+
+spring:
+  redis:
+    cluster:
+      max-redirects: 16
+      nodes: 172.16.33.92:6379,172.16.33.93:6379,172.16.33.94:6379,172.16.33.95:6379,172.16.33.96:6379,172.16.33.97:6379
+    database: 0
+    lettuce:
+      pool:
+        max-active: 16
+        min-idle: 2
+        max-idle: 8
+    timeout: 60000
+    password:
